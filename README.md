@@ -11,7 +11,7 @@ Bağlantı içermeyen kısımlar hakkında henüz bir not hazırlamamışım dem
 | E-posta Sunucusu | Erdem Bayer | [**https://boratanrikulu.me/smtp-nasil-calisir-ve-postfix-kurulumu/**](https://boratanrikulu.me/smtp-nasil-calisir-ve-postfix-kurulumu/) |
 | Merkezi Log Sunucusu Oluşturulması | Erdem Bayer | [**https://boratanrikulu.me/merkezi-log-server-olusturulmasi/**](https://boratanrikulu.me/merkezi-log-server-olusturulmasi/) |
 | DNS | Çağlar Yeşilyurt | **---** |
-| Dizin Servisleri | Aydın Doyak | [**https://boratanrikulu.me/ldap-nedir-ornek-bir-uygulama/**](https://boratanrikulu.me/ldap-nedir-ornek-bir-uygulama/) |
+| Dizin Servisleri (LDAP) | Aydın Doyak | [**https://boratanrikulu.me/ldap-nedir-ornek-bir-uygulama/**](https://boratanrikulu.me/ldap-nedir-ornek-bir-uygulama/) |
 | Sanalaştırma | Mesutcan Kurt | **---** |
 | Dosya Sistemleri | Mesutcan Kurt | **---** |
 | Vekil (Proxy) Sunucu | Mesutcan Kurt | **---** |
