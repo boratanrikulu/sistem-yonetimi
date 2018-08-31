@@ -1,8 +1,12 @@
 ## GNU/Linux Sistem Yönetimi 2. Düzey Notları
 
-Eğitim sürecinde öğrendiğim konular hakkında notlar çıkarıyor ve bunları blog'umda paylaşıyorum. Bağlantılara aşağıdan erişebilirsiniz.
+Bi süredir LYK18'de gördüğüm konular hakkında not çıkarmaya çalışıyorum. Şu ana kadar ağ yönetimi, postgresql, smtp, rsyslog ve ldap hakkında yazabildim. bunları blog'umda paylaşıyorum, ama derli toplu olması açısından şu şekilde bir repo oluşturma ihtiyacı duydum.
 
-Bağlantı içermeyen kısımlar hakkında henüz bir not hazırlamamışım demektir. Konuların hepsi hakkında kısa sürede not hazırlamam pek mümkün değil. Eğer siz de eğitime katıldıysanız ve not çıkarıyorsanız burada, bu repo üzerinde ilgili bağlantıları toparlayabiliriz. Bunun için çıkardığınız konunun bağlantı adresini ekleyip Pull Request atabilirsiniz. Ya da bana telegram üzerinden ulaşabilirisiz [**@boratanrikulu**](https://t.me/boratanrikulu).
+Fakat kısa sürede tüm konular hakkında yazmam hem bilgi düzeyim hem de vaktim açısından şuan çok mümkün gözükmüyor. Eğer siz de eğitime katıldıysanız destek vermek istiyorsanız herhangi bir yerde paylaşıp adresini yollarsanız ya da pull request atarsanız çok sevinirim. bu şekilde birlikte tüm konular hakkında yazılan notları bir yere toplamış oluruz.
+
+Bana telegramdan ulaşmak için : [**@boratanrikulu**](https://t.me/boratanrikulu)
+
+Eğitim sürecinde öğrendiğim konular hakkında notlar çıkarıyor ve bunları blog'umda paylaşıyorum. Bağlantılara aşağıdan eriş
 
 | Konu | Eğitmen | Bağlantı Adresi |
 |:----:|:-------:|:---------------:|
