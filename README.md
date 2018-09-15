@@ -18,5 +18,5 @@ Bana telegramdan ulaşmak için : [**@boratanrikulu**](https://t.me/boratanrikul
 | Dosya Sistemleri | Mesutcan Kurt | **---** |
 | Vekil (Proxy) Sunucu | Mesutcan Kurt | **---** |
 | Betik Yazımı | Aydın Doyak | [**https://github.com/boratanrikulu/wordpress-backup.sh/**](https://github.com/boratanrikulu/wordpress-backup.sh/blob/master/wordpress_backup.sh) |
-| Apache | Doruk Fişek | [**Safa Bayar - Apache**](/katikida-bulunanlar/safa-bayar/apache/apache.md) |
+| Apache | Doruk Fişek | [**Safa Bayar - Apache**](/katkida-bulunanlar/safa-bayar/apache/apache.md) |
 | Advanced High Performance Network | Engür Pişirici | **---** |
