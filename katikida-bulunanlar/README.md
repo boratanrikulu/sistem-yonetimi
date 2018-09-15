@@ -1,1 +1,1 @@
-bu klasörde altında katkıdan bulunanlar tarafından yollanan yazılar bulunur.
+bu klasörde altında katkıda bulunanlar tarafından yollanan yazılar bulunur.
