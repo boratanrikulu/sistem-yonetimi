@@ -1,26 +1,23 @@
-**Not :** Bu yazı Safa Bayar tarafından yazılmıştır. Katkısı için kendisine teşekkür ederim.
+#APACHE
 
-**[gitlab.com/rection/lyk18-SistemYonetimi-2-duzey](https://gitlab.com/rection/lyk18-SistemYonetimi-2-duzey)**
 
----
+Kursun son gunlerinde doruk fişek hocamızın anlattığı web konusunu sizlere aktarmaya çalışacağım.
 
-# APACHE
+Doruk hoca konuyu slayt üzerinden anlattı. Sonrasında bazı görevler verip bunları yapmamızı istedi.  Kendi notlarım ve hocanın anlattıklarından aklımda kalanları anlatmayı planlıyorum. Herhangi bir konuda yanlış görürseniz lütfen bildirmeyi unutmayın.
 
-Kursun son gunlerinde doruk fişek hocamızın anlattığı web konsunu sizlere aktarmaya çalışacağım.
-
-Doruk hoca konuyu slayt üzerinden anlattı. Sonrasında bazı görevler verip bunları yapmamızı istedi. Verilen görevler üzerine 3 saat süre verildi.  Kendi notlarım ve hocanın anlattıklarından aklımda kalanlarını anlatmayı planlıyorum. Herhangi bir konu da yanlış görürseniz lütfen bildirmeyi unutmayın.
 
 + Derste bir adet centos minimal sanal makine istenmektedir.
-+ Anlatımdaki hataları değiştirmek için: [Gitlab](https://gitlab.com/rection/lyk18-SistemYonetimi-2-duzey.git)
-+ Derste antlatımda kullanılan slayt için: [Slayt](http://topluluk.ozguryazilim.com.tr/wp-content/sunumlar/sistemyonetimi-sunumlar/apache_web_sunucusu.html#1)
++ Anlatımda ki hataları değiştirmek için: [Gitlab](https://gitlab.com/rection/lyk18-SistemYonetimi-2-duzey.git)
++ Ders de kullanılan slayt için: [Slayt](http://topluluk.ozguryazilim.com.tr/wp-content/sunumlar/sistemyonetimi-sunumlar/apache_web_sunucusu.html#1)
 
-## Web Mimarisi  
+##Web Mimarisi  
 
-![Alt text](/katkida-bulunanlar/safa-bayar/apache/images/0.png)  
+![Alt text](apache-dorukfisek/eklenti/index.gif)  
 
-Fotoğraftaki istemciler kullanıcıların kullandığı bir arayüzdür. Web için bunlar web tarayıcılarıdır. (Örneğin Firefox, Safari, Chrome...) Tarayıcılar ile herhangi bir sayfaya ulaştığımızı düşünürsek, öncelikle sayfanın bulunduğu bir sunucuya gidip web sitesini istemektedir. Bunun için sunucuda çalışan bir web sunucusu olmalıdır.
+Fotoğrafda ki istemciler web tarayıcılarıdır. Web tarayıcıları, internette yayınlanmış bir sayfaya ulaşmak için bir arayüzdür. Bunlara örnek verir isek firefoxi chrome, safari gibi araçlardır. Tarayıcıdan herhangi adresi arattığınız zaman, ağlar aracılığıyla adresin bulunduğu sunucuya gidilmektedir. Sunucudan sayfa istenmesi için sunucu da web sunucusu olmalıdır.  
 
-Web sunucusu amacı istenen verinin sunucudan alınıp karşı tarafa ulaştırılmasını sağlar. (Örneğin Apache, Nginx) Burada gelen isteğin durumuna göre durum kodu döndürmektedir ve gelen isteği uygulama sunucusuna aktarır. Uygulama sunucusu ise çalışan istemci uygulamalara çeşitli protokoller ile iletmesini sağlar. (zend(php), J2EE(java)) Uygulama sunucuları da kullandığı veritabanı(MySQL,Postgresql...) var ise verilerin düzenlenmesi için veritabanına istek yaparlar. İstek doğrultusunda veritabanı verileri işler ve sonucu tekrar uygulama sunucusuna verirler. Aynı şekilde geriye doğru dönerek istemci tarafına ulaştırılır. Web istemci ve sunucuları arasında genellikle HTTP kullanarak  haberleşir.
+Web sunucusu, istenen sayfanın olup olmadığını kontrol edip istenen sayfayı vermektir. Eğer sayfa bulunamadıysa hata kodu dönmektedir. Eğer sayfa bulunursa, yapılmasını istenen farklı bir işlem varsa (kayıt, veri işleme...) uygulama sunucusuna yönlendirilir. Uygulama sunucusu, gelen isteğin içinde bulunan işlemleri yapması için yönlendiren ve kontrol eden mekanizmadır. Uygulama sunucusuna örnek verirsek zend(php), J2EE(java) gibi araçlardır. Eğer sistemde veritabanı kullanılmış ise uygulama sunucusu veritabanına istek gönderip işlenmesini sağlar. Veritabanını ile uygulama sunucusu arasında haberleşme http protokolü ile yapılır.  
+
 
 HTTP: Hyper Text Transfer Protocol, 80. port kullanılmaktadır.  
 HTTPS: HTTP Secure (Güvenli), 443. port kullanılmaktadır.  
@@ -28,14 +25,15 @@ URL: Bir web sunucusunun bulunduğu konumun, insanlar tarafından okunan kısmı
 
 Netcraft'ın verdiği rakama göre (Eylül 2018) web sunucusu payları:  
 
-![Alt Img](/katkida-bulunanlar/safa-bayar/apache/images/1.png)    
+![Alt Img](apache-dorukfisek/eklenti/websunucu.png)    
+
 
 StatCounter'ın verdiği rakama göre (Ağustos 2018) istemci payları:  
 
-![Alt Img](/katkida-bulunanlar/safa-bayar/apache/images/2.png)  
+![Alt Img](apache-dorukfisek/eklenti/sonbrowser.png)  
 
 
-### Apache Tarihçesi
+###Apache Tarihçesi
 
 1991 - HTTP'nin 0.9 duyuruldu.  
 1994 - NCSA HTTPd geliştirilmesi durdu.  
@@ -44,13 +42,13 @@ StatCounter'ın verdiği rakama göre (Ağustos 2018) istemci payları:
 1999 - Apache Software Foundation kuruldu.  
 2018 - 350+ Apache projesiyle Apache dünyanın en popüler sunucusudur.  
 
-### Apache Kurulumu
+###Apache Kurulumu
 
-Apache'nin kurulumu oldukça basittir. Centos 7 dağıtımı bulunan bir sanal makina üzerinde yapılması gerekmektedir.. Debian dağıtımlarında komutlar ve konfigürasyon dosyalarının yeri değişmektedir.  
+Apache'nin kurulumu oldukça basittir. Centos 7 dağıtımı üzerinden anlatılmıştır. Debian dağıtımlarında komutlar ve konfigürasyon dosyalarının yeri değişmektedir.  
 
 >`# yum install httpd `  
 
-Yükleme aşamasında root yetkilerine sahip olmanız gerekmektedir.    
+httpd paketini indirip, yüklemektedir.    
 
 >`# service httpd start `  
 
@@ -71,36 +69,30 @@ Firewall üzerinden 80.portu tcp protokolü için açıyoruz.
 
 Ayar dosyaları ise şunlardır;  
 
-> /etc/httpd/conf/httpd.conf  
-> /etc/httpd/conf.d/*.conf  
-> /etc/sysconfig/httpd  
+>/etc/httpd/conf/httpd.conf  
+>/etc/httpd/conf.d/*.conf  
+>/etc/sysconfig/httpd  
 
-### Çalışma Modelleri  
+###Çalışma Modelleri  
 
 MPM (Multi-Processing Modules): Web sunucusunun temel işlevlerini değiştirmek için kullanılır. Bu apache'nin modüler dizaynı sayesinde olmaktadır. Bütün http işlemlerinde kullanılır. Bu aşamaları kullanmak için üç tane seçim aşaması vardır. Bunlar Prefork, Worker ve Event'tır.
 
->**Prefork (öntanımlı):** Apache calıştığında alt süreçler başlamaktadır. Bunlar öntanımlı olarak gelen istekleri karşılamak için çalışan servislerdir. Prefork bunun kontrol edilmesini sağlar.
+>**Prefork (öntanımlı):** Apache ilk calıştırıldığında alt süreçlerle başlamaktadır. Bunlar öntanımlı olarak gelen istekleri karşılamak için çalışan servislerdir. Prefork bunun kontrol edilmesini sağlar.
 
 >**Worker (Threaded):** Bir bağlantı olduğu zaman her alt işlemler yeni kuyruklar oluşturur. Prefork'tan farkı burada bağlantı olduğu zaman yeni bir alt işlem oluşturulur.
 
 >**Event (Threaded - Apache 2.4+):** Diğer işlemlere göre daha fazla isteği aynı anda sunulmasına izin verir. Burada ilk isteği tamamladıktan sonra istemci bağlantıyı açık tutabilir. Bu sayede aynı soketi kullanarak daha fazla istek gönderebilir ve bağlantıya aşırı yüklenmesini azaltır.    
 
-Nginx varsayılan olarak Worker(Threaded) çalışan bir servistir. Apache varsayılan olarak prefork çalışmaktadır. Apache'yi istediğimiz gibi bu aşamalardan birine geçirebiliriz.   
+Nginx varsayılan olarak Worker(Threaded) çalışan bir servistir. Apache varsayılan olarak prefork çalışmaktadır. Her iki web sunucusunu da anlatılan aşamalardan birine geçirebiliriz.   
 
-### Moduler Yapısı:
-Birçok ek işlev httpd core'unun üzerine eklenir. Httpd core, moduler yapıyı yönetmektedir. Apache'nin birçok özelliği de modül biçimindedir. Modüllerin kaldırılması ve eklenmesi oldukça basittir.
-Ne kadar az modül o kadar az kaynak tüketimini sağlar. Her defasında modüllerin okunması gerektğinden dolayıdır.
-Modüller hem dinamik yüklenebilir, hem de statik olarak gömülebilmektedir. Statik olması avantaj olarak görülmektedir fakat herhangi bir değişiklik yapıldığı zaman, tekrardan derlenmesi gerekmektedir. Bu da yavaşlamasına sebep olmaktadır.
+###Moduler Yapısı:
+Birçok ek işlev httpd core'unun üzerine eklenir. Httpd core, moduler yapıyı yönetmeyi sağlamaktadır. Apache'nin en iyi özelliği modül biçiminde olmasıdır. Her defasında modüllerin okunması gerektiğinden dolayı, ne kadar az modül eklenirse o kadar performanslı çalışır. Modüller hem dinamik yüklenebilir, hem de statik olarak gömülebilmektedir. Statik olması avantaj olarak görülmektedir fakat herhangi bir değişiklik yapıldığı zaman, tekrardan derlenmesi gerekmektedir. Bu da sistemin yavaşlamasına sebep olmaktadır.
 
 Statik derlenmiş modülleri görmek için **`# httpd -l `** komutu kullanılır.
 
-#### Modüllerin Eklenmesi/Çıkarılması:
+####Modüllerin Eklenmesi/Çıkarılması:
 
-/etc/httpd/conf/httpd.conf dosyasının içinde 51. satırda  
-
->`LoadModule auth_basic_module modules/mod_auth_basic.so`   
-
-yazmaktadır. Modules kısmı /etc/httpd/Modules dizinini belirtir. Eklemek istediğiniz modülü modules dizini içine koyulmalıdır. Yüklü modülleri görmek için ```httpd -l ``` komutu kullanılmalıdır. Sonucunda çıkanlar derlenmiş olarak verilen modüllerdir.  
+/etc/httpd/conf/httpd.conf dosyasının içinde 51. satırda `LoadModule auth_basic_module modules/mod_auth_basic.so` bulunmaktadır. 'modules', /etc/httpd/Modules dizinini belirtir. Eklemek istediğiniz modülü modules dizini içine koyulmalıdır.
 
 Apache'nin kendi modüllerinden bazıları şunlardır:  
 
@@ -111,10 +103,11 @@ Apache'nin kendi modüllerinden bazıları şunlardır:
 Apache'nin yaygın kullanılan ek modüllerden bazıları şunlardır:
 
 + mod_pagespeed: Otomatik olarak web optimizasyonu sağlar.
-+ mod_security: Kendi için firewall sistemi vardır. Sql injection gibi güvenlik açıkları içinde kullanılabilir.
++ mod_security: Kendi için firewall sistemi vardır. Sql injection gibi güvenlik açıkları için de kullanılabilir.
 + mod_wsgi: Python dilinde yazılan uygulamanın ayarları ve sunumunda kullanılır.  
 
-## Temel Ayarlar:  
+##Temel Ayarlar:  
+
 
 /etc/httpd/conf/httpd.conf dosyasının 30. satırda **ServerRoot** ayarı bulunmaktadır. Yapılandırma dosyalarının nerede bulunduğunu belirtir.  
 
@@ -127,7 +120,7 @@ Apache'nin yaygın kullanılan ek modüllerden bazıları şunlardır:
 
 Virtualhost tanımlarken kullanılan **ServerAlias** ise birden fazla domain name tanımlamaya yarar.  
 
-## Dizinlere Özgü Ayarlar:
+##Dizinlere Özgü Ayarlar:
 
 Öncelikle tek dizinlerin kullanımından bahsedeceğim.  
 
@@ -152,15 +145,15 @@ DirectoryMatch'da tanımlanan '/[a-d].*' kısımında  anlatılmak istenen a ve 
 **Options -FollowSymLinks** kısımında bulunan '-' bu özelliğin kapatılmasını ifade etmektedir. Varsayılan olarak + gelmektedir.    
 **AllowOverride All** dosyaları okumasına izin verdiğini belirtmektedir.
 
-Bunlara benzer şekilde ***dosyalara, urle, proxy ve virtualhosta*** özgü ayarlar bulunmaktadır. Bazı önemli ayarlar vardır.
+Bunlara benzer şekilde ***dosya, url, proxy ve virtualhostlara*** özgü ayarlar bulunmaktadır. Bazı önemli ayarlar vardır.
 
 **Order allow,deny:** ***İzin verme kurallarından*** önce ***Reddet kurallarınının*** işlenenceğini belirtmektedir. Eğer client ***İzin kurallarıyla*** eşleşme yapmazsa veya eşleşen ***Reddet kuralı*** var ise o zaman client erişimi reddeder.  
 
 **Order deny,allow:** ***Reddet kurallarından*** önce ***İzin verme kurallarının*** işleneceğini belirtmektedir. Eğer client ***Reddet kuralıyla*** eşleşme yapmazsa veya eşleşen ***İzin kuralı*** var ise client erişime izin verir.  
 
-Bu satırın altında Deny(Reddet) ve Allow(İzin verme) satırları yazılması gerekmektedir.
+Bu satırın altında Deny(Reddet) ve Allow(İzin verme) satırları yazılması zorunluluktur. Daha ayrıntılı bilgi için [tıklayınız](http://www.maxi-pedia.com/Order+allow+deny).  
 
-## DirectoryIndex  
+##DirectoryIndex  
 Dizinlere erişimlerin ayarlanması ve  hata kodlarının buna göre ayarlanmasını da sağlar. Tanımlı dosya eşleşmez ise Indexes özelliği inclenir. Indexes yetkisi varsa dosya listesi gösterilir. Indexes yetkisi yoksa "403 Forbidden" döndürür.  
 
 **ServerTokens:** Sunucunun döndüğü cevabın başında sunucunun başında taşınan bilgilerdir. Apachenin ve İşletim sisteminin versiyonuna göre verilen bilgileri göstermektedir. Daha fazla bilgi için [tıklayınız](https://httpd.apache.org/docs/2.4/mod/core.html#servertokens).  
@@ -173,7 +166,7 @@ Dizinlere erişimlerin ayarlanması ve  hata kodlarının buna göre ayarlanmas�
 
 **MaxRequestsPerChild 4000:** Kaç işlem sonrasında işlemin öldüreceğini belirtir. Daha fazla bilgi için [tıklayınız](https://httpd.apache.org/docs/2.4/mod/mpm_common.html#MaxRequestsPerChild).  
 
-**MaxClients 150:** Ram miktarına göre maksimum clients ihtiyacına göre ayarlamaya yarar. 
+**MaxClients 150:** Ram miktarına göre maksimum clients ihtiyacına göre ayarlamaya yarar. Daha fazla bilgi için [tıklayınız](https://2bits.com/articles/tuning-the-apache-maxclients-parameter.html).  
 
 **ServerLimit 256:** Apache işlemlerinin maksimum harcayabileceği ram miktarını belirler. MaxRequestWorkers ile orantılı bir şekilde ayarlanmalıdır. Daha fazla bilgi edinmek için [tıklayınız](https://httpd.apache.org/docs/current/en/mod/mpm_common.html).  
 
@@ -183,8 +176,8 @@ Dizinlere erişimlerin ayarlanması ve  hata kodlarının buna göre ayarlanmas�
 
 **MaxKeepAliveRequests 4000:** Bağlantı başına izin verilecek istek sayısını sınırlar. Sunucu başarımını yüksek tutmak için yüksel bir değer olmalıdır. Daha fazla bilgi için [tıklayınzı](https://httpd.apache.org/docs/2.4/mod/core.html#maxkeepaliverequests).  
 
-## .htaccess  
-.htaccess dosyası ana sunucu yapılandırma dosyasına erişilemediğinde veya değistirilemediğinde .htaccess dosyası kullanılmalıdır. Ayrıca eski siteden yeni siteye veya eski sayfalardan yeni sayfalara yönlendirmek için kullanılır.
+##.htaccess  
+.htaccesss sunulacak olan verilerin bulunduğu dizine özgü ayarların yapılmasını sağlayan bir araçtır. Ana sunucu yapılandırma dosyasına erişilemediğinde veya değistirilemediğinde .htaccess dosyası kullanılmalıdır. Ayrıca eski siteden yeni siteye veya eski sayfalardan yeni sayfalara yönlendirmek için kullanılır.
 
 + httpd.conf içinde AccessFileName ayarı etkinleştirilmelidir.
 >      AccessFileName .htaccess
@@ -192,19 +185,19 @@ Dizinlere erişimlerin ayarlanması ve  hata kodlarının buna göre ayarlanmas�
 + Apache öncelikle her dizinde .htaccess dosyasını arar.  
 + O dizin ve altındaki dizinler için bu ayarlar geçerli olur.  
 
-#### Avantajlar:  
+####Avantajlar:  
 + httpd.conf'u düzenleme yetkisi gerektirmez.    
 + Ayarlar anında etkili olur.  
 + Dizinin taşınmasında ayarlar da taşınır.  
 
-#### Dezavantajlar:
+####Dezavantajlar:
 + Performansı düşürür. Bir belge istendiğinde her dizinin kök dizinine kadar daha yukarı bakmalıdır ve her dizinin değiştirilmesi aşamasında tekrar en başta ki .htaccess dosyasını okumaktadır. Bu da yavaşlamasına sebep olmaktadır.  
 + Güvenliği azaltır. Dosyalarındaki yönergelerin yanlış yapılandırması, dizindeki ve alt dizinlerin içindeki belgeler de sorunlara neden olabilir.
 
-#### Alias
+####Alias
 Dosyaların sunulacağı dizinin farklı bir yerde saklanmasını mümkün kılar. Url yolu ile dizin yolunun eşlenmesini sağlar.
 
-#### Redirect
+####Redirect
 Eski bir url'i yönlendirmek için kullanılır. Https'e zorlamak için kullanılan bir yöntemdir. Redirect'de regex kullanılamaz iken *RedirectMatch* ile kullanılabilmektedir.  
 
 >```Redirect 301 /eski_yeri.html http://www.ozguryazilim.com.tr/yeni_yeri.php```  
@@ -212,39 +205,38 @@ Eski bir url'i yönlendirmek için kullanılır. Https'e zorlamak için kullanı
 
 *Rewrite konusunu hocamız slaytta yazılanları anlattı. Zaten slayt yeterince bu konu hakkında açıklayıcıdır.*  
 
-## SSL ile Şifreleme:
+##SSL ile Şifreleme:
 
-Açılımı Secure Sockets Layer'dir. Amacı bir website ile ziyaretçinin taraycısı arasında güvenli bağlantı oluşturmasıdır. Diğer deyişle karşı tarafın ulaşmak istediğimiz yer olduğunu doğrulamaktır. SSL domain name içindir. Sunucu için değildir. Daha fazla bilgi edinmek için [tıklayınız](http://www.networksolutions.com/education/what-is-an-ssl-certificate/).
+Açılımı Secure Sockets Layer'dir. Amacı bir websitesi ile ziyaretçinin taraycısı arasında güvenli bağlantı oluşturmasını sağlamaktadır. Diğer deyişle karşı tarafın ulaşmak istediğimiz yer olduğunu doğrulamaktır. SSL domain name içindir. Sunucu için değildir. Daha fazla bilgi edinmek için [tıklayınız](http://www.networksolutions.com/education/what-is-an-ssl-certificate/).
 
 SSL kurulum aşamasından bahsetmiyoruz çünkü dersin son kısımda verilen görevlerden birisidir.
 
 Eğer dosya upload edilecekse öncelikle /tmp/ dizinin altına indirilmektedir. Sonrasında aktarılmaktadır. Bunların tanımlanması php sunulmasında kullanılır.
 
-## Proxy:
+##Proxy:
 
 Basit bir tanımla internet erişimi sırasında kullanılar ara sunucudur. Sadece tarayıcı üzerinden ayarlanabilmektedir. Bir bağlantıda öncelikle isteğiniz proxy sunucusuna sonrasında internete açılmaktadır. Kullanılmasının amacı yasaklı sitelere girilebilmesidir ama vpn gibi değildir. Proxy sunucusu ile aranızda ki bağlantı şifreli değildir ve proxy sunucusu https desteklemeyebilir. İki çeşidi vardır.
 
-![proxy](/katkida-bulunanlar/safa-bayar/apache/images/3.png))
+![proxy](apache-dorukfisek/eklenti/ReverseProxy.jpg)
 
-#### Forward Proxy(Yönlendirilmiş proxy):
+####Forward Proxy(Yönlendirilmiş proxy):
 Yukarıda anlatılan olan konu forward proxy'dir.
 
-#### Reverse Proxy(Ters Proxy):
-Forward proxy'nin tersidir. Client tarafından gelen istekleri karşılayıp arkadaki konumlandırılmış sunucuya yönlendirir.
+####Reverse Proxy(Ters Proxy):
+Forward proxy'nin tersidir. Client tarafından gelen istekleri karşılayıp arkada ki konumlandırılmış sunucuya yönlendirir.
 
-İkisinin farkı: Forward proxy client tarafının kimliğini saklarken, Reverse proxy sunucunun kimliğini saklamasını sağlar.
+İkisinin farkı: Forward proxy client tarafının kimliğini saklarken, Reverse proxy sunucunun kimliğini saklamasını sağlamaktadır.
 
 Ters proxy ile sunucu tarafınta ssl yükünü kaldırabiliyoruz. Bu sayede sunucunun yükü azalmaktadır. Debug ve capture etmek için sunucu tarafında http kullanılmalıdır. 
 
-## Apache Logları
+##Apache Logları
 
 Varsayılan olarak log kayıtları /var/log/httpd/ altında tutulmaktadır. İsteğe göre client ismi ile tutulması mümkündür. Logların gün sonunda sıkıştırılıp imzalanması gerekmektedir. Loglar herhangi bir yasal durum karşısında sorun oluşmaması için 2 yıl saklanması gerekmektedir. Logların tutulmaması karşısında suçlu kayıt tutması gereken kişi olmaktadır. Ayrıntılı bilgi için [tıklayınız](http://www.mevzuat.gov.tr/MevzuatMetin/1.5.5651.pdf).
 
 Logların analizinin yapılması için bazı araçlardan bahsedildi. Bunlardan en fazla piwik kullanılmaktadır.
 
 
-### **Doruk Hoca'nın verdiği ödevler:**  
-
+###**Doruk Hoca'nın verdiği ödevler:**  
 1-)SSL  
 2-)Reverse Proxy -----> hürriyet.com.tr'ye yönlendirmesi istenmektedir.  
 3-)Virtualhost ------->test1.linux.gen.tr  
