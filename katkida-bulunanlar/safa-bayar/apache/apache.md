@@ -227,7 +227,7 @@ Forward proxy'nin tersidir. Client tarafından gelen istekleri karşılayıp ark
 
 İkisinin farkı: Forward proxy client tarafının kimliğini saklarken, Reverse proxy sunucunun kimliğini saklamasını sağlamaktadır.
 
-Ters proxy ile sunucu tarafınta ssl yükünü kaldırabiliyoruz. Bu sayede sunucunun yükü azalmaktadır. Debug ve capture etmek için sunucu tarafında http kullanılmalıdır. 
+Ters proxy ile sunucu tarafınta ssl yükünü kaldırabiliyoruz. Bu sayede sunucunun yükü azalmaktadır. Debug ve capture etmek için sunucu tarafında http kullanılmalıdır.
 
 ##Apache Logları
 
