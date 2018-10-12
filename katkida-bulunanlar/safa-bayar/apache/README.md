@@ -1,4 +1,4 @@
-#APACHE
+# APACHE
 
 
 Kursun son gunlerinde doruk fişek hocamızın anlattığı web konusunu sizlere aktarmaya çalışacağım.
@@ -10,9 +10,9 @@ Doruk hoca konuyu slayt üzerinden anlattı. Sonrasında bazı görevler verip b
 + Anlatımda ki hataları değiştirmek için: [Gitlab](https://gitlab.com/rection/lyk18-SistemYonetimi-2-duzey.git)
 + Ders de kullanılan slayt için: [Slayt](http://topluluk.ozguryazilim.com.tr/wp-content/sunumlar/sistemyonetimi-sunumlar/apache_web_sunucusu.html#1)
 
-##Web Mimarisi  
+## Web Mimarisi  
 
-![Alt text](apache-dorukfisek/eklenti/index.gif)  
+![Alt text](https://raw.githubusercontent.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/resimduzenleme/upgrade/katkida-bulunanlar/safa-bayar/apache/images/0.png)  
 
 Fotoğrafda ki istemciler web tarayıcılarıdır. Web tarayıcıları, internette yayınlanmış bir sayfaya ulaşmak için bir arayüzdür. Bunlara örnek verir isek firefoxi chrome, safari gibi araçlardır. Tarayıcıdan herhangi adresi arattığınız zaman, ağlar aracılığıyla adresin bulunduğu sunucuya gidilmektedir. Sunucudan sayfa istenmesi için sunucu da web sunucusu olmalıdır.  
 
@@ -25,15 +25,15 @@ URL: Bir web sunucusunun bulunduğu konumun, insanlar tarafından okunan kısmı
 
 Netcraft'ın verdiği rakama göre (Eylül 2018) web sunucusu payları:  
 
-![Alt Img](apache-dorukfisek/eklenti/websunucu.png)    
+![Alt Img](https://raw.githubusercontent.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/resimduzenleme/upgrade/katkida-bulunanlar/safa-bayar/apache/images/1.png)    
 
 
 StatCounter'ın verdiği rakama göre (Ağustos 2018) istemci payları:  
 
-![Alt Img](apache-dorukfisek/eklenti/sonbrowser.png)  
+![Alt Img](https://raw.githubusercontent.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/resimduzenleme/upgrade/katkida-bulunanlar/safa-bayar/apache/images/2.png)  
 
 
-###Apache Tarihçesi
+### Apache Tarihçesi
 
 1991 - HTTP'nin 0.9 duyuruldu.  
 1994 - NCSA HTTPd geliştirilmesi durdu.  
@@ -42,7 +42,7 @@ StatCounter'ın verdiği rakama göre (Ağustos 2018) istemci payları:
 1999 - Apache Software Foundation kuruldu.  
 2018 - 350+ Apache projesiyle Apache dünyanın en popüler sunucusudur.  
 
-###Apache Kurulumu
+### Apache Kurulumu
 
 Apache'nin kurulumu oldukça basittir. Centos 7 dağıtımı üzerinden anlatılmıştır. Debian dağıtımlarında komutlar ve konfigürasyon dosyalarının yeri değişmektedir.  
 
@@ -69,11 +69,11 @@ Firewall üzerinden 80.portu tcp protokolü için açıyoruz.
 
 Ayar dosyaları ise şunlardır;  
 
->/etc/httpd/conf/httpd.conf  
->/etc/httpd/conf.d/*.conf  
->/etc/sysconfig/httpd  
+`` >/etc/httpd/conf/httpd.conf ``  
+`` >/etc/httpd/conf.d/*.conf ``
+`` >/etc/sysconfig/httpd ``
 
-###Çalışma Modelleri  
+### Çalışma Modelleri  
 
 MPM (Multi-Processing Modules): Web sunucusunun temel işlevlerini değiştirmek için kullanılır. Bu apache'nin modüler dizaynı sayesinde olmaktadır. Bütün http işlemlerinde kullanılır. Bu aşamaları kullanmak için üç tane seçim aşaması vardır. Bunlar Prefork, Worker ve Event'tır.
 
@@ -85,12 +85,12 @@ MPM (Multi-Processing Modules): Web sunucusunun temel işlevlerini değiştirmek
 
 Nginx varsayılan olarak Worker(Threaded) çalışan bir servistir. Apache varsayılan olarak prefork çalışmaktadır. Her iki web sunucusunu da anlatılan aşamalardan birine geçirebiliriz.   
 
-###Moduler Yapısı:
+### Moduler Yapısı:
 Birçok ek işlev httpd core'unun üzerine eklenir. Httpd core, moduler yapıyı yönetmeyi sağlamaktadır. Apache'nin en iyi özelliği modül biçiminde olmasıdır. Her defasında modüllerin okunması gerektiğinden dolayı, ne kadar az modül eklenirse o kadar performanslı çalışır. Modüller hem dinamik yüklenebilir, hem de statik olarak gömülebilmektedir. Statik olması avantaj olarak görülmektedir fakat herhangi bir değişiklik yapıldığı zaman, tekrardan derlenmesi gerekmektedir. Bu da sistemin yavaşlamasına sebep olmaktadır.
 
 Statik derlenmiş modülleri görmek için **`# httpd -l `** komutu kullanılır.
 
-####Modüllerin Eklenmesi/Çıkarılması:
+#### Modüllerin Eklenmesi/Çıkarılması:
 
 /etc/httpd/conf/httpd.conf dosyasının içinde 51. satırda `LoadModule auth_basic_module modules/mod_auth_basic.so` bulunmaktadır. 'modules', /etc/httpd/Modules dizinini belirtir. Eklemek istediğiniz modülü modules dizini içine koyulmalıdır.
 
@@ -106,7 +106,7 @@ Apache'nin yaygın kullanılan ek modüllerden bazıları şunlardır:
 + mod_security: Kendi için firewall sistemi vardır. Sql injection gibi güvenlik açıkları için de kullanılabilir.
 + mod_wsgi: Python dilinde yazılan uygulamanın ayarları ve sunumunda kullanılır.  
 
-##Temel Ayarlar:  
+## Temel Ayarlar:  
 
 
 /etc/httpd/conf/httpd.conf dosyasının 30. satırda **ServerRoot** ayarı bulunmaktadır. Yapılandırma dosyalarının nerede bulunduğunu belirtir.  
@@ -120,7 +120,7 @@ Apache'nin yaygın kullanılan ek modüllerden bazıları şunlardır:
 
 Virtualhost tanımlarken kullanılan **ServerAlias** ise birden fazla domain name tanımlamaya yarar.  
 
-##Dizinlere Özgü Ayarlar:
+## Dizinlere Özgü Ayarlar:
 
 Öncelikle tek dizinlerin kullanımından bahsedeceğim.  
 
@@ -153,7 +153,7 @@ Bunlara benzer şekilde ***dosya, url, proxy ve virtualhostlara*** özgü ayarla
 
 Bu satırın altında Deny(Reddet) ve Allow(İzin verme) satırları yazılması zorunluluktur. Daha ayrıntılı bilgi için [tıklayınız](http://www.maxi-pedia.com/Order+allow+deny).  
 
-##DirectoryIndex  
+## DirectoryIndex  
 Dizinlere erişimlerin ayarlanması ve  hata kodlarının buna göre ayarlanmasını da sağlar. Tanımlı dosya eşleşmez ise Indexes özelliği inclenir. Indexes yetkisi varsa dosya listesi gösterilir. Indexes yetkisi yoksa "403 Forbidden" döndürür.  
 
 **ServerTokens:** Sunucunun döndüğü cevabın başında sunucunun başında taşınan bilgilerdir. Apachenin ve İşletim sisteminin versiyonuna göre verilen bilgileri göstermektedir. Daha fazla bilgi için [tıklayınız](https://httpd.apache.org/docs/2.4/mod/core.html#servertokens).  
@@ -176,7 +176,7 @@ Dizinlere erişimlerin ayarlanması ve  hata kodlarının buna göre ayarlanmas�
 
 **MaxKeepAliveRequests 4000:** Bağlantı başına izin verilecek istek sayısını sınırlar. Sunucu başarımını yüksek tutmak için yüksel bir değer olmalıdır. Daha fazla bilgi için [tıklayınzı](https://httpd.apache.org/docs/2.4/mod/core.html#maxkeepaliverequests).  
 
-##.htaccess  
+## .htaccess  
 .htaccesss sunulacak olan verilerin bulunduğu dizine özgü ayarların yapılmasını sağlayan bir araçtır. Ana sunucu yapılandırma dosyasına erişilemediğinde veya değistirilemediğinde .htaccess dosyası kullanılmalıdır. Ayrıca eski siteden yeni siteye veya eski sayfalardan yeni sayfalara yönlendirmek için kullanılır.
 
 + httpd.conf içinde AccessFileName ayarı etkinleştirilmelidir.
@@ -185,19 +185,19 @@ Dizinlere erişimlerin ayarlanması ve  hata kodlarının buna göre ayarlanmas�
 + Apache öncelikle her dizinde .htaccess dosyasını arar.  
 + O dizin ve altındaki dizinler için bu ayarlar geçerli olur.  
 
-####Avantajlar:  
+#### Avantajlar:  
 + httpd.conf'u düzenleme yetkisi gerektirmez.    
 + Ayarlar anında etkili olur.  
 + Dizinin taşınmasında ayarlar da taşınır.  
 
-####Dezavantajlar:
+#### Dezavantajlar:
 + Performansı düşürür. Bir belge istendiğinde her dizinin kök dizinine kadar daha yukarı bakmalıdır ve her dizinin değiştirilmesi aşamasında tekrar en başta ki .htaccess dosyasını okumaktadır. Bu da yavaşlamasına sebep olmaktadır.  
 + Güvenliği azaltır. Dosyalarındaki yönergelerin yanlış yapılandırması, dizindeki ve alt dizinlerin içindeki belgeler de sorunlara neden olabilir.
 
-####Alias
+#### Alias
 Dosyaların sunulacağı dizinin farklı bir yerde saklanmasını mümkün kılar. Url yolu ile dizin yolunun eşlenmesini sağlar.
 
-####Redirect
+#### Redirect
 Eski bir url'i yönlendirmek için kullanılır. Https'e zorlamak için kullanılan bir yöntemdir. Redirect'de regex kullanılamaz iken *RedirectMatch* ile kullanılabilmektedir.  
 
 >```Redirect 301 /eski_yeri.html http://www.ozguryazilim.com.tr/yeni_yeri.php```  
@@ -205,7 +205,7 @@ Eski bir url'i yönlendirmek için kullanılır. Https'e zorlamak için kullanı
 
 *Rewrite konusunu hocamız slaytta yazılanları anlattı. Zaten slayt yeterince bu konu hakkında açıklayıcıdır.*  
 
-##SSL ile Şifreleme:
+## SSL ile Şifreleme:
 
 Açılımı Secure Sockets Layer'dir. Amacı bir websitesi ile ziyaretçinin taraycısı arasında güvenli bağlantı oluşturmasını sağlamaktadır. Diğer deyişle karşı tarafın ulaşmak istediğimiz yer olduğunu doğrulamaktır. SSL domain name içindir. Sunucu için değildir. Daha fazla bilgi edinmek için [tıklayınız](http://www.networksolutions.com/education/what-is-an-ssl-certificate/).
 
@@ -213,30 +213,30 @@ SSL kurulum aşamasından bahsetmiyoruz çünkü dersin son kısımda verilen g�
 
 Eğer dosya upload edilecekse öncelikle /tmp/ dizinin altına indirilmektedir. Sonrasında aktarılmaktadır. Bunların tanımlanması php sunulmasında kullanılır.
 
-##Proxy:
+## Proxy:
 
 Basit bir tanımla internet erişimi sırasında kullanılar ara sunucudur. Sadece tarayıcı üzerinden ayarlanabilmektedir. Bir bağlantıda öncelikle isteğiniz proxy sunucusuna sonrasında internete açılmaktadır. Kullanılmasının amacı yasaklı sitelere girilebilmesidir ama vpn gibi değildir. Proxy sunucusu ile aranızda ki bağlantı şifreli değildir ve proxy sunucusu https desteklemeyebilir. İki çeşidi vardır.
 
-![proxy](apache-dorukfisek/eklenti/ReverseProxy.jpg)
+![proxy](https://raw.githubusercontent.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/resimduzenleme/upgrade/katkida-bulunanlar/safa-bayar/apache/images/3.png)
 
-####Forward Proxy(Yönlendirilmiş proxy):
+#### Forward Proxy(Yönlendirilmiş proxy):
 Yukarıda anlatılan olan konu forward proxy'dir.
 
-####Reverse Proxy(Ters Proxy):
+#### Reverse Proxy(Ters Proxy):
 Forward proxy'nin tersidir. Client tarafından gelen istekleri karşılayıp arkada ki konumlandırılmış sunucuya yönlendirir.
 
 İkisinin farkı: Forward proxy client tarafının kimliğini saklarken, Reverse proxy sunucunun kimliğini saklamasını sağlamaktadır.
 
 Ters proxy ile sunucu tarafınta ssl yükünü kaldırabiliyoruz. Bu sayede sunucunun yükü azalmaktadır. Debug ve capture etmek için sunucu tarafında http kullanılmalıdır.
 
-##Apache Logları
+## Apache Logları
 
 Varsayılan olarak log kayıtları /var/log/httpd/ altında tutulmaktadır. İsteğe göre client ismi ile tutulması mümkündür. Logların gün sonunda sıkıştırılıp imzalanması gerekmektedir. Loglar herhangi bir yasal durum karşısında sorun oluşmaması için 2 yıl saklanması gerekmektedir. Logların tutulmaması karşısında suçlu kayıt tutması gereken kişi olmaktadır. Ayrıntılı bilgi için [tıklayınız](http://www.mevzuat.gov.tr/MevzuatMetin/1.5.5651.pdf).
 
 Logların analizinin yapılması için bazı araçlardan bahsedildi. Bunlardan en fazla piwik kullanılmaktadır.
 
 
-###**Doruk Hoca'nın verdiği ödevler:**  
+#### Doruk Hoca'nın verdiği ödevler:  
 1-)SSL  
 2-)Reverse Proxy -----> hürriyet.com.tr'ye yönlendirmesi istenmektedir.  
 3-)Virtualhost ------->test1.linux.gen.tr  
