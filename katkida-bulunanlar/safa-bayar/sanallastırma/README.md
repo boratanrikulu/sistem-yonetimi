@@ -87,7 +87,7 @@ Docker konteynerları ise sanallaştırılmış uygulama konteynerlarını işle
 Docker'ın sanallaştırmadan en önemli farkı; sanallaştırma, sanallaştırma katmanın üzerinde bulunan bir işletim sisteminin yönetimini sağlamaktaydı. Docker ise sanallaştırma katmanı bulunmadan docker engine sayesinde üzerinde uygulama çalıştırmaya yarar.
 
 
-###KVM (Kernel-based Virtual Machine):
+###KVM (Kernel-based Virtual Machine): 
 
 Full-virtualization kullanarak linux kerneli sanallaştırma aracıyla(Hypervisor) sanal makina kurmaktadır.
 
