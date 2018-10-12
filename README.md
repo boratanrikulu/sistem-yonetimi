@@ -14,9 +14,9 @@ Bana telegramdan ulaşmak için : [**@boratanrikulu**](https://t.me/boratanrikul
 | Merkezi Log Sunucusu Oluşturulması | Erdem Bayer | [**https://boratanrikulu.me/merkezi-log-server-olusturulmasi/**](https://boratanrikulu.me/merkezi-log-server-olusturulmasi/) |
 | DNS | Çağlar Yeşilyurt | **---** |
 | Dizin Servisleri (LDAP) | Aydın Doyak | [**https://boratanrikulu.me/ldap-nedir-ornek-bir-uygulama/**](https://boratanrikulu.me/ldap-nedir-ornek-bir-uygulama/) |
-| Sanalaştırma | Mesutcan Kurt | [**Safa Bayar - Sanalaştırma**](/katkida-bulunanlar/safa-bayar/sanallastırma/sanallastırma.md) [**[gitlab.com/rection]**](https://gitlab.com/rection/) |
+| Sanalaştırma | Mesutcan Kurt | [**Safa Bayar - Sanalaştırma**](/katkida-bulunanlar/safa-bayar/sanallastırma/README.md) [**[gitlab.com/rection]**](https://gitlab.com/rection/) |
 | Dosya Sistemleri | Mesutcan Kurt | **---** |
 | Vekil (Proxy) Sunucu | Mesutcan Kurt | **---** |
 | Betik Yazımı | Aydın Doyak | [**https://github.com/boratanrikulu/wordpress-backup.sh/**](https://github.com/boratanrikulu/wordpress-backup.sh/blob/master/wordpress_backup.sh) |
-| Apache | Doruk Fişek | [**Safa Bayar - Apache**](/katkida-bulunanlar/safa-bayar/apache/apache.md) [**[gitlab.com/rection]**](https://gitlab.com/rection/) |
+| Apache | Doruk Fişek | [**Safa Bayar - Apache**](/katkida-bulunanlar/safa-bayar/apache/README.md) [**[gitlab.com/rection]**](https://gitlab.com/rection/) |
 | Advanced High Performance Network | Engür Pişirici | **---** |
