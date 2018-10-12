@@ -64,7 +64,7 @@ Bir donanımın simülasyon edilmesi yerine programın izole edilmiş bir ortamd
 
 Donanım da sanallaştırma için destek sağlayan CPU'ları ve performansını iyileştirmeye yardımcı olan diğer donanım bileşenlerini içerir. Bu sayede donanımı daha verimli kullanarak daha performanslı çalışmasını sağlar.  
 
-![Alt text](https://raw.githubusercontent.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/resimduzenleme/upgrade/katkida-bulunanlar/safa-bayar/sanallast%C4%B1rma/images/Virtualization.pngSO)  
+![Alt text](https://raw.githubusercontent.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/resimduzenleme/upgrade/katkida-bulunanlar/safa-bayar/sanallast%C4%B1rma/images/Virtualization.png)  
 
 ### Wine:
 
