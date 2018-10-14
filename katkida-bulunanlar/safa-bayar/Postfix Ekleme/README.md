@@ -1,6 +1,6 @@
 # Virtual Host
 
-Virtual host kavramı derste, virtual mail dizinene sahip olanlar, farklı domain adlarına sahip olanlar ve unix kullanıcısı olmayan durumu için anlatıldı. Ben de anladıklarımı ve notlarımı size aktarmaya çalışacağım.
+Virtual host kavramı derste, virtual mail dizinine sahip olanlar, farklı domain adlarına sahip olanlar ve unix kullanıcısı olmayan durumu için anlatıldı. Ben de anladıklarımı ve notlarımı size aktarmaya çalışacağım.
 
 Büyük sistemlerde çok fazla kullanıcı bulunmaktadır ve her biri için domain adı girilmiş olmalıdır. Bundan dolayı çok fazla kaynak ve zaman gerekmektedir. Bu sorunun önüne geçmek için virtual host kavramı kullanılmaktadır.
 
@@ -46,11 +46,11 @@ joe@domain2.com domain2.com/joe/
 john@virtual.org virtual.org/john/
 ```
 
- - **postmap /etc/postfix/virtual:** komutuN çalıştırılmasıyla virtual dosyası ayarlanmaktadır.
- - **postmap /etc/postfix/vmailbox:** çalıştırılmasıyla vmailbox dosyası ayarlanmaktadır.
+ - **postmap /etc/postfix/virtual:** komutun çalıştırılmasıyla virtual dosyası ayarlanmaktadır.
+ - **postmap /etc/postfix/vmailbox:** komutunun çalıştırılmasıyla vmailbox dosyası ayarlanmaktadır.
  - **postfix reload:** komutun çalıştırılmasıyla main.cf dosyasında ki ayarlar güncellenmektedir.
 
-Oluşturulan virtual domainlerin virtual mail kutuları */var/spool/vmail* dizinin altında oluşrulmaktadır. Eğer bu mail kutularının kullanıcı dizinin altında bulunması istenirse şu komutlar uygulanarak otomatik olarak mailler ev dizinin altında toplanması sağlanmaktadır.
+Oluşturulan virtual domainlerin virtual mail kutuları */var/spool/vmail* dizinin altında oluşturulmaktadır. Eğer bu mail kutularının kullanıcı dizinin altında bulunması istenirse şu komutlar uygulanarak otomatik olarak mailler ev dizinin altında toplanması sağlanmaktadır.
 
 Kaynaklar:  
 
