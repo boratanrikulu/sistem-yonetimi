@@ -1,4 +1,4 @@
-## Virtual-host
+# Virtual Host
 
 Virtual host kavramı derste, virtual mail dizinene sahip olanlar, farklı domain adlarına sahip olanlar ve unix kullanıcısı olmayan durumu için anlatıldı. Ben de anladıklarımı ve notlarımı size aktarmaya çalışacağım.
 
@@ -54,5 +54,5 @@ Oluşturulan virtual domainlerin virtual mail kutuları */var/spool/vmail* dizin
 
 Kaynaklar:  
 
-[1](https://www.howtoforge.com/linux_postfix_virtual_hosting)
+[1](https://www.howtoforge.com/linux_postfix_virtual_hosting)  
 [2](http://www.postfix.org/VIRTUAL_README.html)
