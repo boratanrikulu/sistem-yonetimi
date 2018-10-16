@@ -6,6 +6,11 @@ Kısa sürede tüm konular hakkında yazmam hem bilgi düzeyim hem de vaktim aç
 
 Bana telegramdan ulaşmak için : [**@boratanrikulu**](https://t.me/boratanrikulu)
 
+## Emeği Geçenler
+
+[**Bora Tanrıkulu**](https://github.com/boratanrikulu)  
+[**Safa Bayar**](https://gitlab.com/rection/)
+
 | Konu | Eğitmen | Bağlantı Adresi |
 |:----:|:-------:|:---------------:|
 | Ağ Yönetimi Uygulamaları | Engür Pişirici | [**https://boratanrikulu.me/bus-topology-ornek-uygulama/**](https://boratanrikulu.me/bus-topology-ornek-uygulama/) |
