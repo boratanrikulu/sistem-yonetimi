@@ -8,8 +8,8 @@ Bana telegramdan ulaşmak için : [**@boratanrikulu**](https://t.me/boratanrikul
 
 ## Emeği Geçenler
 
-[**Bora Tanrıkulu**](https://github.com/boratanrikulu)  
-[**Safa Bayar**](https://gitlab.com/rection/)
+- [**Bora Tanrıkulu**](https://github.com/boratanrikulu)  
+- [**Safa Bayar**](https://gitlab.com/rection/)
 
 | Konu | Eğitmen | Bağlantı Adresi |
 |:----:|:-------:|:---------------:|
