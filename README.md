@@ -11,6 +11,7 @@ Bana telegramdan ulaşmak için : [**@boratanrikulu**](https://t.me/boratanrikul
 | Ağ Yönetimi Uygulamaları | Engür Pişirici | [**https://boratanrikulu.me/bus-topology-ornek-uygulama/**](https://boratanrikulu.me/bus-topology-ornek-uygulama/) |
 | PostgreSQL Veritabanı Sunucusu | Devrim Gündüz | [**https://boratanrikulu.me/postgresql-nedir-nasil-calisir/**](https://boratanrikulu.me/postgresql-nedir-nasil-calisir/) |
 | E-posta Sunucusu | Erdem Bayer | [**https://boratanrikulu.me/smtp-nasil-calisir-ve-postfix-kurulumu/**](https://boratanrikulu.me/smtp-nasil-calisir-ve-postfix-kurulumu/) |
+| | | [**Safa Bayar - Postfix(Virtual Host)**](/katkida-bulunanlar/safa-bayar/Postfix%20Ekleme/README.md) [**[gitlab.com/rection]**](https://gitlab.com/rection/) |
 | Merkezi Log Sunucusu Oluşturulması | Erdem Bayer | [**https://boratanrikulu.me/merkezi-log-server-olusturulmasi/**](https://boratanrikulu.me/merkezi-log-server-olusturulmasi/) |
 | DNS | Çağlar Yeşilyurt | **---** |
 | Dizin Servisleri (LDAP) | Aydın Doyak | [**https://boratanrikulu.me/ldap-nedir-ornek-bir-uygulama/**](https://boratanrikulu.me/ldap-nedir-ornek-bir-uygulama/) |
