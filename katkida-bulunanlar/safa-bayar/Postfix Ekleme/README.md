@@ -54,5 +54,5 @@ Oluşturulan virtual domainlerin virtual mail kutuları */var/spool/vmail* dizin
 
 Kaynaklar:  
 
-[1](https://www.howtoforge.com/linux_postfix_virtual_hosting)  
-[2](http://www.postfix.org/VIRTUAL_README.html)
+[www.howtoforge.com/linux_postfix_virtual_hosting](https://www.howtoforge.com/linux_postfix_virtual_hosting)  
+[www.postfix.org/VIRTUAL_README.html](http://www.postfix.org/VIRTUAL_README.html)
