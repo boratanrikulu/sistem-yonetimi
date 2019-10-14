@@ -1,4 +1,4 @@
-![Image of Squid](https://octodex.github.com/images/yaktocat.png)
+![Image of Squid](https://github.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/blob/squid/katkida-bulunanlar/safa-bayar/Squid/squid.jpg)
 
 # Squid
 
@@ -127,6 +127,8 @@ Herhangi bir tarayıcı(Firefox, Chrome) ve bilgisayarınızın ayarlar kısmın
 3. Elle ayarlama kısmına sunucunuzun ip adresine karşısına port numarınızı yazmanız gerekmektedir. 
 4. "Bu proxy sunusunu bütün protokollerde kullan." seçeneğini işaretleyiniz.
 5. Tamam deyip çıkın ve tarayıcınız içerisinde ip adresinizin değiştiğini göreceksiniz.
+
+![firefox](https://github.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/blob/squid/katkida-bulunanlar/safa-bayar/Squid/firefoxsquid.jpg)
 
 Bilgisayarınız içinden ayarlamak için [bu](https://linuxize.com/post/how-to-install-and-configure-squid-proxy-on-ubuntu-18-04/#configuring-your-browser-to-use-proxy) kaynağı izleyebilirsiniz. Yukarıda anlattığım sadece tarayıcı içerisinde geçerli olacaktır.  
 ### Log Tutmak ve Log Sınırı
