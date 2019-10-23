@@ -22,7 +22,7 @@ Bana telegramdan ulaşmak için : [**@boratanrikulu**](https://t.me/boratanrikul
 | Dizin Servisleri (LDAP) | Aydın Doyak | [**`boratanrikulu.dev/ldap-nedir-ornek-bir-uygulama/`**](https://boratanrikulu.dev/ldap-nedir-ornek-bir-uygulama/) |
 | Sanalaştırma | Mesutcan Kurt | [**`Safa Bayar - Sanalaştırma`**](/katkida-bulunanlar/safa-bayar/sanallastırma/README.md) [**`[gitlab.com/rection]`**](https://gitlab.com/rection/) |
 | Dosya Sistemleri | Mesutcan Kurt | **---** |
-| Vekil (Proxy) Sunucu | Mesutcan Kurt | **---** |
+| Vekil (Proxy) Sunucu | Mesutcan Kurt | [**`Safa Bayar - Squid`**](/katkida-bulunanlar/safa-bayar/Squid/README.md) [**`[gitlab.com/rection]`**](https://gitlab.com/rection/) |
 | Betik Yazımı | Aydın Doyak | [**`github.com/boratanrikulu/wordpress-backup.sh/`**](https://github.com/boratanrikulu/wordpress-backup.sh/blob/master/wordpress_backup.sh) |
 | Apache | Doruk Fişek | [**`Safa Bayar - Apache`**](/katkida-bulunanlar/safa-bayar/apache/README.md) [**`[gitlab.com/rection]`**](https://gitlab.com/rection/) |
 | Advanced High Performance Network | Engür Pişirici | **---** |
