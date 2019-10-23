@@ -79,7 +79,7 @@ www.facebook.com
 Ayar dosyası içerisinden şu şekilde tanımlama yapmanız gerekmektedir.
 
 ```
-acl ban_domains dstdomain "/etc/squid/ban_domains.txt"
+acl ban_domains dstdomain "/etc/squid/ban_domains.txt" 
 http_access deny ban_domains
 ```
 
