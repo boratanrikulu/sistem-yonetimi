@@ -1,6 +1,8 @@
+>![Image of Squid](https://github.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/blob/squid/katkida-bulunanlar/safa-bayar/Squid/squid.jpg)
+
 # Squid
 
-Squid, cachleme işlemlerini ve HTTP bağlantılarını yönlendirmenizi sağlayan bir web proxy aracıdır. Çok geniş kullanım alanı vardır. Squid ile Ağı loglayabilir, kontrol edebilir, yönetebilir ve yönlendirebilir. Ayrıca aradaki bağlantının hızını kontrol edebilirsiniz. [Cache](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) ile ilgili bilgi almak için linki takip edebilirsiniz.
+Squid, önbellekleme(cache) işlemlerini ve HTTP bağlantılarını yönlendirmenizi sağlayan bir web proxy aracıdır. Çok geniş kullanım alanı vardır. Squid ile Ağı loglayabilir, kontrol edebilir, yönetebilir ve yönlendirebilir. Ayrıca aradaki bağlantının hızını kontrol edebilirsiniz. [Önbellek](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching) ile ilgili bilgi almak için linki takip edebilirsiniz.
 
 Squid, SSL,TLS ve HTTPS protokollerini kullanabilmektedir fakat Privoxy'nin aksine SOCKS protokolünü desteklememektedir. Squid varsayılan olarak 3128 portunu kullanmaktadır, servis ayar dosyası içerisinden değiştirerek farklı portu kullanabilirsiniz.
 
@@ -89,8 +91,64 @@ Sonrasında servisi yeniden yüklediğimiz zaman liste aktif olacaktır.
 systemctl reload squid
 ```
 
-### IP aralığına veya IP'ye Erişim izni Verme
+### IP Aralıklarına veya IP'lere İzin Vermek
 
-### Loglama ve Log Sınırları
+ACL tanımının kullanımı kısaca şöyledir;
 
-### Squid Cache Sıkışması
+acl name type definition1 definition2
+
+Eğer izin vermek istiyorsak **http_acccess** kısmında allow belirtip acl'in ismini yazmamız gerekmektedir.
+
+http_access allow <acl name>
+
+Örnek verirsem;
+
+```
+acl permittedip src 77.86.72.49
+
+http_access allow permittedip
+```
+
+Burada sadece bir ip adresine erişim izni verilmektedir. Bu erişim izni verilen ip adresi doğrudan squid'e bağlanıp proxy bağlantısını kullanılabilir. Eğer erişim iznini kaldırmak isterseniz. Bu satırı açıklama satırına almanız yeterli olmaktadır.
+
+
+Eğer bir ip bloğuna erişim izni vermek isterseniz, CIDR kurallarına göre belirtebilirsiniz. Farklı subnet adreslerine bölerek belli ip aralıklarının kullanmasını sağlayabilirsiniz. Bu sayede her ip için farklı satır yazmanıza gerek kalmaz. Örneğin;
+
+```
+acl permittedips src 77.86.72.0/8
+```
+
+### Servise Bağlanmak
+
+Herhangi bir tarayıcı(Firefox, Chrome) ve bilgisayarınızın ayarlar kısmından ayarlayabilirsiniz.
+
+1. Firefox içerisinden Ayarlara gidiniz. 
+2. Sayfanın en aşağısında ağ ayarlarına tıklayınız.
+3. Elle ayarlama kısmına sunucunuzun ip adresine karşısına port numarınızı yazmanız gerekmektedir. 
+4. "Bu proxy sunusunu bütün protokollerde kullan." seçeneğini işaretleyiniz.
+5. Tamam deyip çıkın ve tarayıcınız içerisinde ip adresinizin değiştiğini göreceksiniz.
+
+![firefox](https://github.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/blob/squid/katkida-bulunanlar/safa-bayar/Squid/firefoxsquid.jpg)
+
+Bilgisayarınız içinden ayarlamak için [bu](https://linuxize.com/post/how-to-install-and-configure-squid-proxy-on-ubuntu-18-04/#configuring-your-browser-to-use-proxy) kaynağı izleyebilirsiniz. Yukarıda anlattığım sadece tarayıcı içerisinde geçerli olacaktır.  
+### Log Tutmak ve Log Sınırı
+
+Squid'te önemli log dosyaları bulunmaktadır. Bunları aşağıda belirttim.
+
+```
+* __/var/log/squid/access.log :__  Kimlerin eriştiğini ve ne yaptıklarının loglarını tutar.
+* __/var/log/squid/cache.log :__ Squid'in ürettiği hata mesajlarını loglar.
+* __/var/log/squid/store.log :__ Diskin üzerinde saklanan log, erişimlerin loglarını saklar. Mevcut logların silinmesine karşı olan bir dosyadır.
+```
+
+Diğer önemli bir konu ise eğer squid daha fazla ram isterse kendine ait swap alanı ayırabilmektedir. Şu şekilde kapatabilirsiniz;
+
+```
+squid -k shutdown
+```
+
+### Log Temizliği
+
+Eğer log dosyası çok büyümesini istemiyorsanız. Crontab'e aşağıdaki kuralı ekleyebilirsiniz.
+
+Bu [adres](https://wiki.squid-cache.org/SquidFaq/SquidLogs) üzerinden loglama ile ilgili daha fazla bilgi edinebilirisiniz.
