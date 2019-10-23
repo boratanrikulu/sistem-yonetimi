@@ -1,4 +1,4 @@
->![Image of Squid](https://github.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/blob/squid/katkida-bulunanlar/safa-bayar/Squid/squid.jpg)
+![Image of Squid](https://github.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/blob/squid/katkida-bulunanlar/safa-bayar/Squid/squid.jpg)
 
 # Squid
 
@@ -81,7 +81,7 @@ www.facebook.com
 Ayar dosyası içerisinden şu şekilde tanımlama yapmanız gerekmektedir.
 
 ```
-acl ban_domains dstdomain "/etc/squid/ban_domains.txt" 
+acl ban_domains dstdomain "/etc/squid/ban_domains.txt"
 http_access deny ban_domains
 ```
 
@@ -122,9 +122,9 @@ acl permittedips src 77.86.72.0/8
 
 Herhangi bir tarayıcı(Firefox, Chrome) ve bilgisayarınızın ayarlar kısmından ayarlayabilirsiniz.
 
-1. Firefox içerisinden Ayarlara gidiniz. 
+1. Firefox içerisinden Ayarlara gidiniz.
 2. Sayfanın en aşağısında ağ ayarlarına tıklayınız.
-3. Elle ayarlama kısmına sunucunuzun ip adresine karşısına port numarınızı yazmanız gerekmektedir. 
+3. Elle ayarlama kısmına sunucunuzun ip adresine karşısına port numarınızı yazmanız gerekmektedir.
 4. "Bu proxy sunusunu bütün protokollerde kullan." seçeneğini işaretleyiniz.
 5. Tamam deyip çıkın ve tarayıcınız içerisinde ip adresinizin değiştiğini göreceksiniz.
 
