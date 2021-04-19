@@ -12,7 +12,7 @@ Doruk hoca konuyu slayt üzerinden anlattı. Sonrasında bazı görevler verip b
 
 ## Web Mimarisi  
 
-![Alt text](https://raw.githubusercontent.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/resimduzenleme/upgrade/katkida-bulunanlar/safa-bayar/apache/images/0.png)  
+![Alt text](images/0.png)  
 
 Fotoğrafda ki istemciler web tarayıcılarıdır. Web tarayıcıları, internette yayınlanmış bir sayfaya ulaşmak için bir arayüzdür. Bunlara örnek verir isek firefoxi chrome, safari gibi araçlardır. Tarayıcıdan herhangi adresi arattığınız zaman, ağlar aracılığıyla adresin bulunduğu sunucuya gidilmektedir. Sunucudan sayfa istenmesi için sunucu da web sunucusu olmalıdır.  
 
@@ -25,12 +25,12 @@ URL: Bir web sunucusunun bulunduğu konumun, insanlar tarafından okunan kısmı
 
 Netcraft'ın verdiği rakama göre (Eylül 2018) web sunucusu payları:  
 
-![Alt Img](https://raw.githubusercontent.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/resimduzenleme/upgrade/katkida-bulunanlar/safa-bayar/apache/images/1.png)    
+![Alt Img](images/1.png)    
 
 
 StatCounter'ın verdiği rakama göre (Ağustos 2018) istemci payları:  
 
-![Alt Img](https://raw.githubusercontent.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/resimduzenleme/upgrade/katkida-bulunanlar/safa-bayar/apache/images/2.png)  
+![Alt Img](images/2.png)  
 
 
 ### Apache Tarihçesi
@@ -217,7 +217,7 @@ Eğer dosya upload edilecekse öncelikle /tmp/ dizinin altına indirilmektedir. 
 
 Basit bir tanımla internet erişimi sırasında kullanılar ara sunucudur. Sadece tarayıcı üzerinden ayarlanabilmektedir. Bir bağlantıda öncelikle isteğiniz proxy sunucusuna sonrasında internete açılmaktadır. Kullanılmasının amacı yasaklı sitelere girilebilmesidir ama vpn gibi değildir. Proxy sunucusu ile aranızda ki bağlantı şifreli değildir ve proxy sunucusu https desteklemeyebilir. İki çeşidi vardır.
 
-![proxy](https://raw.githubusercontent.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/resimduzenleme/upgrade/katkida-bulunanlar/safa-bayar/apache/images/3.png)
+![proxy](images/3.png)
 
 #### Forward Proxy(Yönlendirilmiş proxy):
 Yukarıda anlatılan olan konu forward proxy'dir.

@@ -50,7 +50,7 @@ RAID 3 ve RAID 4'ün özelliklerini bulundurmaktadır. Ek olarak saklama (cache)
 
 ## Donanım Sanallaştırma:
 
-![Alt text](https://raw.githubusercontent.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/resimduzenleme/upgrade/katkida-bulunanlar/safa-bayar/sanallast%C4%B1rma/images/SON1.png)  
+![Alt text](images/SON1.png)  
 
 ### Full Virtualization:
 
@@ -64,7 +64,7 @@ Bir donanımın simülasyon edilmesi yerine programın izole edilmiş bir ortamd
 
 Donanım da sanallaştırma için destek sağlayan CPU'ları ve performansını iyileştirmeye yardımcı olan diğer donanım bileşenlerini içerir. Bu sayede donanımı daha verimli kullanarak daha performanslı çalışmasını sağlar.  
 
-![Alt text](https://raw.githubusercontent.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/resimduzenleme/upgrade/katkida-bulunanlar/safa-bayar/sanallast%C4%B1rma/images/Virtualization.png)  
+![Alt text](images/Virtualization.png)  
 
 ### Wine:
 
@@ -81,7 +81,7 @@ Docker'dan bahsetmeden önce konteyner teknolojisinden bahsedilmesi gerekmektedi
 
 Docker konteynerları ise sanallaştırılmış uygulama konteynerlarını işletim sistemleri üzerinden yönetmek için kullanılmaktadır. Bir docker konteynerı, uygulama servisini (fonksiyonlarının bütün kütüphanleri ile beraber), ayar dosyaları, bağımlılıkları ve diğer operasyon parçalarını bulundurmaktadır. Her konteyner işletim sisteminin servisi(process) aracılığıyla yönetilebilmektedir.
 
-![Alt Text](https://raw.githubusercontent.com/rection/LYK18-GNULinuxSistemYonetimi-Duzey2/resimduzenleme/upgrade/katkida-bulunanlar/safa-bayar/sanallast%C4%B1rma/images/ENSON2.png)
+![Alt Text](images/ENSON2.png)
 
 Docker'ın sanallaştırmadan en önemli farkı; sanallaştırma, sanallaştırma katmanın üzerinde bulunan bir işletim sisteminin yönetimini sağlamaktaydı. Docker ise sanallaştırma katmanı bulunmadan docker engine sayesinde üzerinde uygulama çalıştırmaya yarar.
 

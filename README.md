@@ -4,8 +4,6 @@ Bi süredir OYK18YAZ'da gördüğüm konular hakkında not çıkarmaya çalış�
 
 Kısa sürede tüm konular hakkında yazmam hem bilgi düzeyim hem de vaktim açısından şuan için çok mümkün gözükmüyor. Eğer siz de eğitime katıldıysanız ve destek vermek istiyorsanız, herhangi bir yerde notunuzu paylaşıp adresini yollarsanız ya da pull request atarsanız çok sevinirim. Bu şekilde birlikte tüm konular hakkında yazılan notları bir yere toplamış oluruz.
 
-Bana telegramdan ulaşmak için : [**@boratanrikulu**](https://t.me/boratanrikulu)
-
 ## Emeği Geçenler
 
 - [**Bora Tanrıkulu** - **`github.com/boratanrikulu`**](https://github.com/boratanrikulu/) 
@@ -13,12 +11,12 @@ Bana telegramdan ulaşmak için : [**@boratanrikulu**](https://t.me/boratanrikul
 
 | Konu | Eğitmen | Bağlantı Adresi |
 |:----:|:-------:|:---------------:|
-| Ağ Yönetimi Uygulamaları | Engür Pişirici | [**`Bus Topology Örnek Uygulama - Bora Tanrıkulu`**](https://boratanrikulu.dev/bus-topology-ornek-uygulama/) |
-| PostgreSQL Veritabanı Sunucusu | Devrim Gündüz | [**`Postgresql Nedir, Nasıl Çalışır - Bora Tanrıkulu`**](https://boratanrikulu.dev/postgresql-nedir-nasil-calisir/) |
-| E-posta Sunucusu | Erdem Bayer | [**`SMTP Nasıl Çalışır - Bora Tanrıkulu`**](https://boratanrikulu.dev/smtp-nasil-calisir-ve-postfix-kurulumu/)<br>[**`Postfix (Virtual Host) - Safa Bayar`**](katkida-bulunanlar/safa-bayar/postfix_ekleme/) |
-| Merkezi Log Sunucusu Oluşturulması | Erdem Bayer | [**`Merkezi Log Server Oluşturulması - Bora Tanrıkulu`**](https://boratanrikulu.dev/merkezi-log-server-olusturulmasi/) |
+| Ağ Yönetimi Uygulamaları | Engür Pişirici | [**`Bus Topology Örnek Uygulama - Bora Tanrıkulu`**](https://bora.sh/bus-topology-ornek-uygulama/) |
+| PostgreSQL Veritabanı Sunucusu | Devrim Gündüz | [**`Postgresql Nedir, Nasıl Çalışır - Bora Tanrıkulu`**](https://bora.sh/postgresql-nedir-nasil-calisir/) |
+| E-posta Sunucusu | Erdem Bayer | [**`SMTP Nasıl Çalışır - Bora Tanrıkulu`**](https://bora.sh/smtp-nasil-calisir-ve-postfix-kurulumu/)<br>[**`Postfix (Virtual Host) - Safa Bayar`**](katkida-bulunanlar/safa-bayar/postfix_ekleme/) |
+| Merkezi Log Sunucusu Oluşturulması | Erdem Bayer | [**`Merkezi Log Server Oluşturulması - Bora Tanrıkulu`**](https://bora.sh/merkezi-log-server-olusturulmasi/) |
 | DNS | Çağlar Yeşilyurt | **---** |
-| Dizin Servisleri (LDAP) | Aydın Doyak | [**`LDAP Nedir Örnek Bir Uygulama - Bora Tanrıkulu`**](https://boratanrikulu.dev/ldap-nedir-ornek-bir-uygulama/) |
+| Dizin Servisleri (LDAP) | Aydın Doyak | [**`LDAP Nedir Örnek Bir Uygulama - Bora Tanrıkulu`**](https://bora.sh/ldap-nedir-ornek-bir-uygulama/) |
 | Sanalaştırma | Mesutcan Kurt | [**`Sanalaştırma - Safa Bayar`**](katkida-bulunanlar/safa-bayar/sanallastırma/) |
 | Dosya Sistemleri | Mesutcan Kurt | **---** |
 | Vekil (Proxy) Sunucu | Mesutcan Kurt | [**`Squid - Safa Bayar`**](katkida-bulunanlar/safa-bayar/squid/) |
