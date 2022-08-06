@@ -1,10 +1,8 @@
 ## GNU/Linux Sistem Yönetimi 2. Düzey Notları
 
-Bi süredir OYK18YAZ'da gördüğüm konular hakkında not çıkarmaya çalışıyorum. Şu ana kadar ağ yönetimi, postgresql, smtp, rsyslog ve ldap hakkında yazabildim. Bunları bloğumda paylaşıyorum ama derli toplu olması açısından bu şekilde bir repo oluşturma ihtiyacı duydum.
+Mustafa Akgül Özgür Yazılım Yaz Kampı - 2018'de eğitimi verilen "GNU/Linux Sistem Yönetimi 2. Düzey" kursunun notları. 
 
-Kısa sürede tüm konular hakkında yazmam hem bilgi düzeyim hem de vaktim açısından şuan için çok mümkün gözükmüyor. Eğer siz de eğitime katıldıysanız ve destek vermek istiyorsanız, herhangi bir yerde notunuzu paylaşıp adresini yollarsanız ya da pull request atarsanız çok sevinirim. Bu şekilde birlikte tüm konular hakkında yazılan notları bir yere toplamış oluruz.
-
-## Emeği Geçenler
+#### Emeği Geçenler
 
 - [**Bora Tanrıkulu** - **`github.com/boratanrikulu`**](https://github.com/boratanrikulu/) 
 - [**Safa Bayar** - **`gitlab.com/rection`**](https://gitlab.com/rection/)
